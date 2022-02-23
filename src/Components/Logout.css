@@ -6,7 +6,7 @@
   height: 100vh;
   font-family: "Inter";
 }
-.logout__btn {
+.logout-btn {
   min-width: 300px;
   padding: 17px 30px;
   margin-top: 20px;
@@ -17,6 +17,6 @@
   font-family: "Inter";
   border-radius: 3px;
 }
-.user__name {
+.user-name {
   color: #8d0ada;
 }

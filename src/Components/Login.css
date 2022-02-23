@@ -7,17 +7,17 @@
   align-items: center;
   font-family: "Inter";
 }
-.login__form {
+.login-form {
   display: flex;
   flex-direction: column;
 }
-.login__form > h1 {
+.login-form > h1 {
   font-style: 35px;
   margin-bottom: 15px;
   padding-bottom: 10px;
   letter-spacing: -1px;
 }
-.login__form > input {
+.login-form > input {
   min-width: 380px;
   padding: 22px 0px;
   padding-left: 15px;
@@ -28,7 +28,7 @@
   border-radius: 10px;
   font-size: 15px;
 }
-.submit__btn {
+.submit-btn {
   min-width: 380px;
   padding: 22px 0px;
   padding-left: 15px;

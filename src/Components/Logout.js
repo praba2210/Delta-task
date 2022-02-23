@@ -13,8 +13,8 @@ const Logout = () => {
     }
   return (
     <div className="logout">
-       <h1> Welcome <span className="user__name" >Prabakaran</span></h1>
-        <button className="logout__btn" onClick={(e) => handleLogout(e)}>
+       <h1> Welcome <span className="user-name" >Prabakaran</span></h1>
+        <button className="logout-btn" onClick={(e) => handleLogout(e)}>
             Logout
             </button>
     </div>

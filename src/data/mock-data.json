@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "name": "Son Goku",
+        "company":"Roshi",
+        "status":"Alive",
+        "lastupdated":"2020-01-01",
+        "notes":"yeet yeet yeet"
+    },
+    {
+        "id": "2",
+        "name": "Vegeta",
+        "company":"Vegeta",
+        "status":"closed",
+        "lastupdated":"2020-02-10",
+        "notes":"Vegeta, from planet Vegeta, Son of Vegeta, Prince Vegeta"
+    },
+    {
+        "id": "3",
+        "name": "Krillin",
+        "company":"Roshi",
+        "status":"Alive",
+        "lastupdated":"2022-01-01",
+        "notes":"Android 18"
+    },
+    {
+        "id": "4",
+        "name": "Gohan",
+        "company":"piccolo",
+        "status":"Alive",
+        "lastupdated":"2021-01-12",
+        "notes":"Mystic Saiyan"
+    }
+
+]

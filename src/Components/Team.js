@@ -4,17 +4,58 @@ import ReactDOM from "react-dom";
 import { useDispatch } from 'react-redux';
 import { logout } from '../features/userSlice';
 import tdata from '../data/mock-data.json';
-import Checkbox from '../Components/checkbox';
+import Checkbox from './checkbox';
+import { nanoid } from '@reduxjs/toolkit';
+
 
 
 const Team = () => {
     const [isCheckAll, setIsCheckAll] = useState(false);
     const [isCheck, setIsCheck] = useState([]);
     const [members, setmembers] = useState([]);
+    const [show, setshow] = useState(false);
+   
 
     useEffect(() => {
         setmembers(tdata);
     }, [members]);
+
+    const [addMember, setAddMember] = useState(
+      {
+        name: "",
+        company: "",
+        status: "",
+        lastupdated: "",
+        notes: ""
+      })
+
+      const handleAddMemberChange = (event) => {
+        event.preventDefault();
+        const fieldName = event.target.getAttribute("name");
+        const fieldValue = event.target.value;
+        const newMemberdata = {...addMember};
+        newMemberdata[fieldName] = fieldValue;
+
+        setAddMember(newMemberdata);
+      };
+
+      const handleAddFormSubmit = (event) => {
+        {
+          event.preventDefault();
+          const newMember = {
+            id: nanoid(),
+            name: addMember.name,
+            company: addMember.company,
+            status: addMember.status,
+            lastupdated: addMember.lastupdated,
+            notes: addMember.notes
+
+          };
+
+          const newMembers = [...members, newMember];
+          setmembers(newMembers);
+        };
+      };
 
     const handleSelectAll = e => {
       setIsCheckAll(!isCheckAll);
@@ -43,7 +84,9 @@ const Team = () => {
 
     <div className="Team">
     <h1 className="tm">Team Members</h1>
-
+    <span className="addmember">
+    <button className="addmember-btn" onClick=''>Add Member</button>
+    </span>
         <div className="mtable">
             <table>
                 <thead>
